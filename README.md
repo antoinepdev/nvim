@@ -8,7 +8,7 @@ A minimalistic nvim config for Full Stack developer than includes:
 
 ## How to install
 ```bash
-git clone https://antoinepdev/nvim.git
+git clone https://github.com/antoinepdev/nvim
 ```
 
 ## Dependencies
