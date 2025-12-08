@@ -1,10 +1,10 @@
 # My personal nvim config
 A minimalistic nvim config for Full Stack developer than includes:
-[ ] keymaps
-[ ] Autocomplete
-[ ] lsp 
-[ ] linters
-[ ] formaters
+- keymaps (to do)
+- Autocomplete (to do)
+- lsp (to do)
+- linters (to do)
+- formaters (to do)
 
 ## How to install
 ```bash
