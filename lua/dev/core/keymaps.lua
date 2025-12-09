@@ -25,3 +25,10 @@ map("n", "<leader>q", ":q<CR>")
 map("n", "<leader>Q", ":q!<CR>")
 map("i", "jk", "<ESC>") -- Exit insert mode with jk
 map("n", "<ESC>", ":nohl<CR>") -- Disable highlight with ESC
+
+
+-- Window movement
+map("n", "gh", "<C-w>h", {desc="Move to left window"})
+map("n", "gl", "<C-w>l", {unique = false, desc="Move to left window"})
+map("n", "gj", "<C-w>j", {desc="Move to bottom window"})
+map("n", "gk", "<C-w>k", {desc="Move to top window"})
