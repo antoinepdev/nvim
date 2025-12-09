@@ -44,3 +44,9 @@ map("t", "jk", "<C-\\><C-n>") -- Exit terminal mode with jk
 map("n", "<leader>1", "<cmd>tabnew<CR>", {desc = "New Tab"})
 map("n", "<leader><Tab>", "<cmd>tabnext<CR>", {desc = "Next Tab"})
 map("n", "<leader>º", "<cmd>tabprevious<CR>", {desc = "Previous Tab"})
+
+
+-- Delete
+map("n", "x", '"_x') -- Delete an charcter without copy
+map("v", "x", '"_d') -- Delete selected code without copy
+map("n", "da", '<cmd>%d<CR>') -- Delete all
