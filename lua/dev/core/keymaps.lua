@@ -50,3 +50,11 @@ map("n", "<leader>º", "<cmd>tabprevious<CR>", {desc = "Previous Tab"})
 map("n", "x", '"_x') -- Delete an charcter without copy
 map("v", "x", '"_d') -- Delete selected code without copy
 map("n", "da", '<cmd>%d<CR>') -- Delete all
+
+
+-- Go to
+map({"n", "v"}, "gm", "%", {desc="Matching current parenthesis or bracket"})
+map("i", "<C-h>", "<Esc>i", {unique = false}) -- Skip next key
+map("i", "<C-l>", "<Esc>la", {unique = false}) -- Skip to previous key
+map({"n", "v"}, "H", "0", {unique=false}) -- Go to the beginning of the line
+map({"n", "v"}, "L", "$", {unique=false}) -- Go to the end of the line
