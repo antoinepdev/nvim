@@ -38,3 +38,9 @@ map("n", "gk", "<C-w>k", {desc="Move to top window"})
 map("n", "<leader>tt", "<cmd>tabnew<CR><cmd>term<CR>i", {desc = "Terminal: New Tab"})
 map("t", "<Esc>", "<C-\\><C-n>") -- Exit terminal mode
 map("t", "jk", "<C-\\><C-n>") -- Exit terminal mode with jk
+
+
+-- Tabs
+map("n", "<leader>1", "<cmd>tabnew<CR>", {desc = "New Tab"})
+map("n", "<leader><Tab>", "<cmd>tabnext<CR>", {desc = "Next Tab"})
+map("n", "<leader>º", "<cmd>tabprevious<CR>", {desc = "Previous Tab"})
