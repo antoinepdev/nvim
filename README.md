@@ -1,8 +1,8 @@
 # My personal nvim config
 A minimalistic nvim config for Full Stack developer than includes:
-- keymaps (to do)
+- keymaps
+- lsp
 - Autocomplete (to do)
-- lsp (to do)
 - linters (to do)
 - formaters (to do)
 
