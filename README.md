@@ -18,6 +18,7 @@ git clone https://github.com/antoinepdev/nvim
 - git >= 2.19.0
 - a Nerd Font (optional)
 - luarocks
+- lua-language-server
 
 ## Warning
 This config only works in Linux
