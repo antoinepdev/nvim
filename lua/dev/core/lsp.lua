@@ -1,11 +1,14 @@
-vim.lsp.enable({})
+vim.lsp.enable({
+  "lua_ls",
+})
 
 vim.diagnostic.config({
 
-  virtual_text = true,
-  underline = true,
+
+  virtual_text = true, -- display inline diagnostics
+  underline = true, -- underline the lines with errors or warnings
   update_in_insert = false, -- diagnostics not update meanwhile insertion mode is active
-  virtual_lines = false,
+  virtual_lines = false, -- display diagnostics on a separate line
   severity_sort = true, -- diagnostics sort per severity level
 
   signs = {
