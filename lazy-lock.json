@@ -1,0 +1,5 @@
+{
+  "blink.cmp": { "branch": "main", "commit": "3033d278848129899f94843e12ebb83a31342faa" },
+  "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
+  "rose-pine": { "branch": "main", "commit": "72a04c4065345b51b56aed4859ea1d884f734097" }
+}
