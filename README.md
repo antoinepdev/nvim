@@ -22,6 +22,7 @@ Make sure the ~/.config/nvim directory exists before cloning.
 
 Ensure you have the following dependencies installed:
 
+- **Neovim**: Version >= 0.10
 - **Node.js**: Version >= 22
 - **Ripgrep**: Version >= 14.1.1
 - **Python**: Version >= 3
