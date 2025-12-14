@@ -1,26 +1,22 @@
 return {
-  'saghen/blink.cmp',
+  "saghen/blink.cmp",
   version= "1.*",
   event = {"InsertEnter", "CmdLineEnter"},
   opts = {
     appearance = {
-      -- 'mono' (default) for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
-      nerd_font_variant = 'mono'
+      -- "mono" (default) for "Nerd Font Mono" or "normal" for "Nerd Font"
+      nerd_font_variant = "mono"
     },
-    -- 'default' (recommended) for mappings similar to built-in completions (C-y to accept)
-    -- 'super-tab' for mappings similar to vscode (tab to accept)
-    -- 'enter' for enter to accept
-    -- 'none' for no mappings
-    --
-    -- All presets have the following mappings:
-    -- C-space: Open menu or open docs if already open
-    -- C-n/C-p or Up/Down: Select next/previous item
-    -- C-e: Hide menu
-    -- C-k: Toggle signature help (if signature.enabled = true)
-    --
-    -- See :h blink-cmp-config-keymap for defining your own keymap
+
+    list = { selection = { preselect = false, auto_insert = false } },
+    -- See :h blink-cmp-config-keymap
     keymap = {
-      preset = 'super-tab',
+      ["<Tab>"] = {"select_next", "fallback"},
+      ["º"] = { "select_prev", "fallback" },
+      ["<CR>"] = { "accept", "fallback" },
+      ["<C-u>"] = { "scroll_documentation_up", "fallback" },
+      ["<C-d>"] = { "scroll_documentation_down", "fallback" },
+      ["<C-e>"] = { "hide", "fallback" },
     },
 
 
@@ -28,7 +24,7 @@ return {
     completion = { documentation = { auto_show = true } },
 
     sources = {
-      default = { 'lsp', 'path', 'buffer' },
+      default = { "lsp", "path", "buffer" },
     },
 
     -- (Default) Rust fuzzy matcher for typo resistance and significantly better performance
