@@ -22,6 +22,7 @@ require("lazy").setup({
     -- import your plugins
     { import = "dev.plugins.ui" },
     { import = "dev.plugins.autocomplete" },
+    { import = "dev.plugins.formatter" },
   },
   checker = { enabled = true, notify = false },
   change_detection = {
