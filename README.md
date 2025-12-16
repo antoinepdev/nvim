@@ -7,8 +7,8 @@ Welcome! This repository contains my personal Neovim configuration, specifically
 - **Custom Keymaps**: Intuitive shortcuts to boost your productivity.
 - **LSP Integration**: Full support for Language Server Protocol, providing advanced autocompletion and navigation.
 - **Autocomplete**: Enhance your coding experience with contextual suggestions.
+- **Formatters**: Keep your code clean and consistent.
 - **Linters**: (To be implemented) Ensure your code follows best practices.
-- **Formatters**: (To be implemented) Keep your code clean and consistent.
 
 ## Installation 🛠️
 
