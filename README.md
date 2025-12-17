@@ -30,6 +30,8 @@ Ensure you have the following dependencies installed:
 - **Nerd Font**: (Optional) For better icon visualization.
 - **LuaRocks**: Package manager for Lua.
 - **Lua Language Server**: For LSP support in Lua.
+- **Tree-sitter**: Version >= 0.25.10
+- **A C compiler**
 
 ## Warning ⚠️
 
