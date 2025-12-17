@@ -1,8 +1,8 @@
 return {
   {
-    'nvim-treesitter/nvim-treesitter',
-    build = ':TSUpdate',
-    branch = 'master',
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+    branch = "master",
     lazy = false,
     opts = {
       highlight = {
@@ -13,20 +13,20 @@ return {
         enable = true,
       },
       ensure_installed = {
-        'lua',
-        'markdown',
-        'markdown_inline',
+        "lua",
+        "markdown",
+        "markdown_inline",
       },
       auto_install = true,
       incremental_selection = {
         enable = true,
         keymaps = {
-          init_selection = '<Tab>',
-          node_incremental = '<Tab>',
-          node_decremental = '<S-Tab>',
+          init_selection = "<Tab>",
+          node_incremental = "<Tab>",
+          node_decremental = "<S-Tab>",
         },
       },
     },
-    config = function(_, opts) require('nvim-treesitter.configs').setup(opts) end,
+    config = function(_, opts) require("nvim-treesitter.configs").setup(opts) end,
   },
 }
