@@ -7,6 +7,7 @@ return {
       "<leader>cf",
       function()
         require("conform").format({ async = true, lsp_fallback = true })
+        vim.print("Formatted code")
       end,
       mode = "n",
       desc = "Format buffer",
