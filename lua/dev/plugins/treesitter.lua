@@ -17,7 +17,8 @@ return {
         "markdown",
         "markdown_inline",
       },
-      auto_install = true,
+      -- Automatically install missing parsers when entering buffer
+      auto_install = false,
       incremental_selection = {
         enable = true,
         keymaps = {
