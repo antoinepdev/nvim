@@ -49,7 +49,6 @@ map("n", "<leader>º", "<cmd>tabprevious<CR>", {desc = "Previous Tab"})
 -- Delete
 map("n", "x", '"_x') -- Delete an charcter without copy
 map("v", "x", '"_d') -- Delete selected code without copy
-map("n", "da", '<cmd>%d<CR>') -- Delete all
 
 
 -- Go to
