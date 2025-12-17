@@ -1,5 +1,8 @@
 return {
   "folke/which-key.nvim",
+  dependencies = {
+    "https://github.com/nvim-mini/mini.icons"
+  },
   event = "VeryLazy",
   opts = {
     preset = "helix",
