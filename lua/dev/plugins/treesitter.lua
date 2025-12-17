@@ -4,6 +4,9 @@ return {
     build = ":TSUpdate",
     branch = "master",
     lazy = false,
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter-textobjects",
+    },
     opts = {
       highlight = {
         enable = true,
@@ -25,6 +28,43 @@ return {
           init_selection = "<Tab>",
           node_incremental = "<Tab>",
           node_decremental = "<S-Tab>",
+        },
+      },
+      textobjects = {
+        select = {
+          enable = true,
+          lookahead = true,
+          keymaps = {
+            ["af"] = "@function.outer",
+            ["if"] = "@function.inner",
+            ["ac"] = "@class.outer",
+            ["ic"] = "@class.inner",
+            ["aa"] = "@parameter.outer",
+            ["ia"] = "@parameter.inner",
+            ["ai"] = "@conditional.outer",
+            ["ii"] = "@conditional.inner",
+            ["al"] = "@loop.outer",
+            ["il"] = "@loop.inner",
+            ["a="] = "@assignment.outer",
+            ["i="] = "@assignment.inner",
+          },
+        },
+        move = {
+          enable = true,
+          set_jumps = true,
+          goto_next_start = {
+            ["]m"] = "@function.outer",
+            ["]]"] = "@class.outer",
+          },
+          goto_previous_start = {
+            ["[m"] = "@function.outer",
+            ["[["] = "@class.outer",
+          },
+        },
+        swap = {
+          enable = true,
+          swap_next = { ["<leader>s"] = "@parameter.inner" },
+          swap_previous = { ["<leader>S"] = "@parameter.inner" },
         },
       },
     },
