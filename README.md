@@ -32,6 +32,8 @@ Ensure you have the following dependencies installed:
 - **Lua Language Server**: For LSP support in Lua.
 - **Stylua**: For formatter support in Lua.
 - **Tree-sitter**: Version >= 0.25.10
+- **Fzf**: Version >= 0.36
+- **Find (fd)**
 - **A C compiler**
 
 ## Warning ⚠️
