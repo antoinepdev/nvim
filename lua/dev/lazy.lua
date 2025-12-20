@@ -23,6 +23,7 @@ require("lazy").setup({
     { import = "dev.plugins.ui" },
     { import = "dev.plugins.autocomplete" },
     { import = "dev.plugins.formatter" },
+    { import = "dev.plugins.finder" },
     { import = "dev.plugins" },
   },
   checker = { enabled = true, notify = false },
