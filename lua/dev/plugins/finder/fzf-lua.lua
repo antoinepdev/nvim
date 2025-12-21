@@ -86,6 +86,7 @@ return {
     },
     {
       "<leader>fh",
+      "<cmd>FzfLua helptags<cr>",
       desc = "find help",
     },
     {
