@@ -43,103 +43,56 @@ return {
   keys = {
     -- Alt-h toggles hidden files in search results on/off
     {
-      "<leader><leader>",
+      "<leader>ff",
       "<cmd>FzfLua files<cr>",
       desc = "find files in project directory",
     },
     {
       "<leader>/",
       "<cmd>FzfLua live_grep<cr>",
-      desc = "(not fuzzy) find by grepping in project directory",
+      desc = "grep (not fuzzy)",
     },
     {
       "<leader>fg",
       "<cmd>FzfLua grep<cr>",
-      desc = "fuzzy find by using ripgrep in project directory",
+      desc = "grep (fuzzy)",
     },
     {
-      "<leader>fc",
+      "<leader>fs",
       "<cmd>FzfLua lgrep_curbuf<cr>",
-      desc = "[f]ind (grep) in [c]urrent buffer",
-    },
-    {
-      "<leader>fv",
-      "<cmd>FzfLua grep_visual<cr>",
-      desc = "[f]ind (grep) in [c]urrent buffer",
-      mode = "x",
+      desc = "find string in current buffer",
     },
     {
       "<leader>fw",
       "<cmd>FzfLua grep_cword<cr>",
-      desc = "[f]ind current [w]ord",
+      desc = "find current word",
     },
     {
       "<leader>fW",
       "<cmd>FzfLua grep_cWORD<cr>",
-      desc = "[f]ind current [W]ORD",
+      desc = "find current WORD",
     },
-    {
-      "<leader>fr",
-      "<cmd>FzfLua resume<cr>",
-      desc = "[f]ind in [r]esumed search",
-    },
-    { "<leader>fu", "<cmd>FzfLua buffers<cr>", desc = "[f]ind open b[u]ffers" },
+    { "<leader>fb", "<cmd>FzfLua buffers<cr>", desc = "find open buffers" },
     {
       "<leader>fd",
       "<cmd>FzfLua diagnostics_document<cr>",
       desc = "[f]ind [d]iagnostics",
     },
-    { "<leader>fo", "<cmd>FzfLua oldfiles<cr>", desc = "[f]ind [o]ld files" },
-    {
-      "<leader>fa",
-      "<cmd>FzfLua autocmds<cr>",
-      desc = "[f]ind [a]utocommands",
-    },
-    {
-      "<leader>gs",
-      "<cmd>FzfLua git_status<cr>",
-      desc = "find [g]it [s]tatus",
-    },
-    {
-      "<leader>gs",
-      "<cmd>FzfLua git_commits<cr>",
-      desc = "find [g]it [c]ommits",
-    },
-    { "<leader>gbl", "<cmd>FzfLua git_blame<cr>", desc = "find [g]it [bl]ame" },
-    {
-      "<leader>gbr",
-      "<cmd>FzfLua git_branches<cr>",
-      desc = "find [g]it [br]anches",
-    },
+    { "<leader>fo", "<cmd>FzfLua oldfiles<cr>", desc = "find old files" },
     {
       "<leader>fO",
       "<cmd>FzfLua nvim_options<cr>",
       desc = "[f]ind [o]ld files",
     },
     {
-      "<leader>vh",
-      "<cmd>FzfLua helptags<cr>",
-      desc = "[v]iew/search Neovim [h]elp",
+      "<leader>fh",
+      desc = "find help",
     },
     {
-      "<leader>fig",
+      "<leader>fc",
       function() require("fzf-lua").files({ cwd = vim.fn.stdpath("config") }) end,
-      desc = "find in neovim con[fig]uration",
+      desc = "find in neovim configuration",
     },
-    {
-      "<C-x><C-f>",
-      function()
-        require("fzf-lua").complete_path({
-          winopts = {
-            height = 0.4,
-            width = 0.5,
-            relative = "cursor",
-          },
-        })
-      end,
-      mode = "i",
-      desc = "fuzzy complete path",
-    },
-    -- { "<leader>ft", "<cmd>FzfLua undotree<cr>", desc = "Undotree" },
+    { "<leader>ft", "<cmd>FzfLua undotree<cr>", desc = "Undotree" },
   },
 }
