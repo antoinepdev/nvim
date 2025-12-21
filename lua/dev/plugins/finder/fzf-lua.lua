@@ -94,5 +94,11 @@ return {
       desc = "find in neovim configuration",
     },
     { "<leader>ft", "<cmd>FzfLua undotree<cr>", desc = "Undotree" },
+    {
+      "<leader>fn",
+      function() require("fzf-lua").files({ cwd = os.getenv("OBSIDIAN_VAULT_PATH")}) end,
+      desc = "find notes",
+    }
+
   },
 }
