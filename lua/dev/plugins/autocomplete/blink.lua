@@ -11,8 +11,9 @@ return {
     list = { selection = { preselect = false, auto_insert = false } },
     -- See :h blink-cmp-config-keymap
     keymap = {
-      preset = "cmdline",
-      ["º"] = { "show_and_insert_or_accept_single", "select_prev" },
+      preset = "none",
+      ["º"] = { "show_and_insert_or_accept_single", "select_next" },
+      ["ª"] = { "show_and_insert_or_accept_single", "select_prev" },
       ["<C-u>"] = { "scroll_documentation_up", "fallback" },
       ["<C-d>"] = { "scroll_documentation_down", "fallback" },
       ["<C-e>"] = { "hide", "fallback" },
