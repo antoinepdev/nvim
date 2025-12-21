@@ -19,6 +19,7 @@ return {
         "lua",
         "markdown",
         "markdown_inline",
+        "bash",
       },
       -- Automatically install missing parsers when entering buffer
       auto_install = false,
