@@ -23,10 +23,17 @@ return {
       -- Basics
       { "<leader>t", group = "Terminal" },
       { "<leader>d", group = "Diagnostics" },
+      { "<leader>c", group = "Code/Comment" },
       { "<leader>?", "<Ignore>", desc = "which_key_ignore" },
 
       -- Mini Files
-      { "<leader>fm", function() require("mini.files").open(vim.api.nvim_buf_get_name(0), true) end, desc = "Open mini files (directory of the current file)", },
+      {
+        "<leader>fm",
+        function()
+          require("mini.files").open(vim.api.nvim_buf_get_name(0), true)
+        end,
+        desc = "Open mini files (directory of the current file)",
+      },
     })
     wk.setup(opts)
   end,
