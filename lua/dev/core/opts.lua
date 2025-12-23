@@ -10,9 +10,7 @@ opt.background = "dark" -- colorschemes that can be light or dark will be made d
 opt.signcolumn = "yes" -- show sign column so that text doesn't shift
 opt.scrolloff = 10 -- Minimal number of screen lines to keep above and below the cursor.
 
-
 vim.o.confirm = true -- if performing an operation that would fail due to unsaved changes in the buffer (like `:q`), instead raise a dialog asking if you wish to save the current file(s) See `:help 'confirm'`
-
 
 -- Tabs & Indentation
 opt.tabstop = 2 -- number of spaces for tabs
@@ -21,8 +19,10 @@ opt.expandtab = true -- expand tab to spaces
 opt.autoindent = true -- copy indent from current line when starting new one
 opt.list = true -- Show <tab> and trailing spaces
 
-
 -- Search Settings
 opt.ignorecase = true -- ignore case when searching
 opt.smartcase = true -- if you include mixed case in your search, assumes you want case-sensitive (ignorecase should be true to work)
 -- opt.wrapscan = false -- when the search reaches the end of the file it will not continue at the start
+
+-- Obsidian
+opt.conceallevel = 1 -- Display links like Obsidian
