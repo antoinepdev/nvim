@@ -1,9 +1,20 @@
+local file_finder_opts = {
+  find_opts = [[-type f \! -path '*/.git/*' \! -path '*/.obsidian/*']],
+  rg_opts = [[--color=never --hidden --files -g "!.git" -g "!.obsidian"]],
+  fd_opts = [[--color=never --hidden --type f --type l --exclude .git --exclude .obsidian --exclude .trash]],
+  git_icons = false,
+  file_icons = false,
+  color_icons = false,
+}
 -- File Picker
 return {
   "ibhagwan/fzf-lua",
   lazy = false,
   dependencies = { "nvim-tree/nvim-web-devicons", "nvim-mini/mini.icons" },
   -- dependencies = { "nvim-mini/mini.icons" },
+  opts = {
+    files = file_finder_opts,
+  },
   config = function()
     require("fzf-lua").setup({
       fzf_colors = true,
@@ -90,16 +101,23 @@ return {
       desc = "find help",
     },
     {
+      "<leader>fn",
+      function()
+        require("fzf-lua").files(
+          vim.tbl_extend(
+            "force",
+            { cwd = os.getenv("OBSIDIAN_VAULT_PATH") },
+            file_finder_opts
+          )
+        )
+      end,
+      desc = "find notes",
+    },
+    { "<leader>ft", "<cmd>FzfLua undotree<cr>", desc = "Undotree" },
+    {
       "<leader>fc",
       function() require("fzf-lua").files({ cwd = vim.fn.stdpath("config") }) end,
       desc = "find in neovim configuration",
     },
-    { "<leader>ft", "<cmd>FzfLua undotree<cr>", desc = "Undotree" },
-    {
-      "<leader>fn",
-      function() require("fzf-lua").files({ cwd = os.getenv("OBSIDIAN_VAULT_PATH")}) end,
-      desc = "find notes",
-    }
-
   },
 }
