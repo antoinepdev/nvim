@@ -11,7 +11,7 @@ return {
       end,
       mode = "n",
       desc = "Format buffer",
-    }
+    },
   },
   -- This will provide type hinting with LuaLS
   ---@module "conform"
@@ -27,7 +27,7 @@ return {
       lsp_format = "fallback",
     },
 
-    -- format_on_save = { timeout_ms = 500 },
+    format_on_save = { timeout_ms = 500 },
 
     -- Customize formatters
     formatters = {
