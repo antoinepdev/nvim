@@ -12,9 +12,9 @@ return {
     -- See :h blink-cmp-config-keymap
     keymap = {
       preset = "none",
-      ["J"] = { "select_next" },
-      ["K"] = { "select_prev" },
-      ["<CR>"] = { "select_and_accept" },
+      ["<C-j>"] = { "select_next" },
+      ["<C-k>"] = { "select_prev" },
+      ["<CR>"] = { "select_and_accept", "fallback" },
       ["<C-u>"] = { "scroll_documentation_up", "fallback" },
       ["<C-d>"] = { "scroll_documentation_down", "fallback" },
       ["<C-e>"] = { "hide", "fallback" },
@@ -27,7 +27,7 @@ return {
     },
 
     sources = {
-      default = { "lsp", "path", "buffer" },
+      default = { "snippets", "lsp", "path", "buffer" },
     },
 
     -- (Default) Rust fuzzy matcher for typo resistance and significantly better performance
