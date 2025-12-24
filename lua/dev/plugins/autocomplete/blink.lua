@@ -12,8 +12,9 @@ return {
     -- See :h blink-cmp-config-keymap
     keymap = {
       preset = "none",
-      ["º"] = { "show_and_insert_or_accept_single", "select_next" },
-      ["ª"] = { "show_and_insert_or_accept_single", "select_prev" },
+      ["J"] = { "select_next" },
+      ["K"] = { "select_prev" },
+      ["<CR>"] = { "select_and_accept" },
       ["<C-u>"] = { "scroll_documentation_up", "fallback" },
       ["<C-d>"] = { "scroll_documentation_down", "fallback" },
       ["<C-e>"] = { "hide", "fallback" },
@@ -22,7 +23,7 @@ return {
     -- (Default) Only show the documentation popup when manually triggered
     completion = {
       documentation = { auto_show = true },
-      menu = { auto_show = false },
+      menu = { auto_show = true },
     },
 
     sources = {
