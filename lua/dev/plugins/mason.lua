@@ -2,6 +2,7 @@ return {
   "mason-org/mason.nvim",
   dependencies = {
     "mason-org/mason-lspconfig.nvim",
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
   },
   opts = {
     ui = {
@@ -21,6 +22,10 @@ return {
         "ts_ls",
         "jsonls",
       },
+    })
+
+    require("mason-tool-installer").setup({
+      ensure_installed = {},
     })
   end,
 }
