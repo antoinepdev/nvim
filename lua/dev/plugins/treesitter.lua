@@ -20,6 +20,7 @@ return {
         "markdown",
         "markdown_inline",
         "bash",
+        "javascript",
       },
       -- Automatically install missing parsers when entering buffer
       auto_install = false,
