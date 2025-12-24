@@ -1,9 +1,9 @@
 vim.lsp.enable({
   "lua_ls",
+  "ts_ls",
 })
 
 vim.diagnostic.config({
-
 
   virtual_text = true, -- display inline diagnostics
   underline = true, -- underline the lines with errors or warnings
@@ -27,8 +27,22 @@ vim.diagnostic.config({
   },
 })
 
-
 -- Keymaps
-vim.keymap.set("n", "<space>dd", vim.diagnostic.open_float, {desc="Display diagnostic", noremap = true, silent = true, buffer = bufnr })
-vim.keymap.set("n", "<space>dn", vim.diagnostic.goto_next, {desc="Go to next diagnostic"})
-vim.keymap.set("n", "<space>dp", vim.diagnostic.goto_prev, {desc="Go to previous diagnostic"})
+vim.keymap.set(
+  "n",
+  "<space>dd",
+  vim.diagnostic.open_float,
+  { desc = "Display diagnostic", noremap = true, silent = true, buffer = bufnr }
+)
+vim.keymap.set(
+  "n",
+  "<space>dn",
+  vim.diagnostic.goto_next,
+  { desc = "Go to next diagnostic" }
+)
+vim.keymap.set(
+  "n",
+  "<space>dp",
+  vim.diagnostic.goto_prev,
+  { desc = "Go to previous diagnostic" }
+)
