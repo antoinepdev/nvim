@@ -1,0 +1,49 @@
+{
+  "Console log": {
+    "prefix": "cl",
+    "body": ["console.log(\"$1:\", $1);"],
+    "description": "Variable log"
+  },
+  "Named function": {
+    "prefix": "fun",
+    "body": ["function ${1:functionName}(${2:params}) {", "  $0", "}"],
+    "description": "Named function"
+  },
+  "Async named function": {
+    "prefix": "anf",
+    "body": ["async function ${1:functionName}(${2:params}) {", "  $0", "}"],
+    "description": "Async named function"
+  },
+  "Export async named function": {
+    "prefix": "eanf",
+    "body": [
+      "export async function ${1:functionName}(${2:params}) {",
+      "  $0",
+      "}"
+    ],
+    "description": "Export async named function"
+  },
+  "Arrow function": {
+    "prefix": "af",
+    "body": ["const ${1:functionName} = (${2:params}) => {", "  $0", "};"],
+    "description": "Arrow function"
+  },
+  "Async arrow function": {
+    "prefix": "aaf",
+    "body": [
+      "const ${1:functionName} = async (${2:params}) => {",
+      "  $0",
+      "};"
+    ],
+    "description": "Async arrow function"
+  },
+  "Export async arrow function": {
+    "prefix": "aaf",
+    "body": [
+      "const ${1:functionName} = async (${2:params}) => {",
+      "  $0",
+      "};"
+    ],
+    "description": "Export async arrow function"
+  }
+}
