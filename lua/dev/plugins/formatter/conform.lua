@@ -21,6 +21,7 @@ return {
     formatters_by_ft = {
       lua = { "stylua" },
       json = { "prettierd", "prettier", stop_after_first = true },
+      javascript = { "prettierd", "prettier", stop_after_first = true },
     },
 
     -- Set default options
