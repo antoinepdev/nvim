@@ -45,5 +45,68 @@
       "};"
     ],
     "description": "Export async arrow function"
+  },
+  "If statement": {
+    "prefix": "if",
+    "body": ["if (${1:condition}) {", "  $0", "}"],
+    "description": "If statement"
+  },
+  "Quick if": {
+    "prefix": "ifq",
+    "body": ["if (${1:condition}) $0"],
+    "description": "Quick if"
+  },
+
+  "For loop": {
+    "prefix": "for",
+    "body": ["for (let ${1:i} = ${2:0}; $1 < ${3:arr}; $1++) {", "  $0", "}"],
+    "description": "For loop"
+  },
+  "Map function": {
+    "prefix": "map",
+    "body": ["map((${1:item}) => {", "  return $0", "});"],
+    "description": "Map function"
+  },
+  "Filter function": {
+    "prefix": "filter",
+    "body": ["filter((${1:item}) => {", "  return $0", "});"],
+    "description": "Filter function"
+  },
+  "Quick filter function": {
+    "prefix": "filterq",
+    "body": ["filter(${1:item} => $0);"],
+    "description": "Filter function"
+  },
+  "Quick foreach function": {
+    "prefix": "foreachq",
+    "body": ["foreach(${1:item} => $0);"],
+    "description": "Quick foreach function"
+  },
+  "Quick some function": {
+    "prefix": "someq",
+    "body": ["some(${1:item} => $0);"],
+    "description": "Quick some function"
+  },
+
+  "Quick every function": {
+    "prefix": "everyq",
+    "body": ["every(${1:item} => $0);"],
+    "description": "Quick every function"
+  },
+
+  "Import file": {
+    "prefix": "impf",
+    "body": ["import \"${1:path}\";", "$0"],
+    "description": "Import file"
+  },
+  "Import module": {
+    "prefix": "imp",
+    "body": ["import { ${2:module} } from \"${1:path}\";", "$0"],
+    "description": "Import module"
+  },
+  "Import default": {
+    "prefix": "impd",
+    "body": ["import ${2:default} from \"${1:path}\";", "$0"],
+    "description": "Import default"
   }
 }
