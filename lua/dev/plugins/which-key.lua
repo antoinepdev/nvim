@@ -24,6 +24,7 @@ return {
       { "<leader>t", group = "Terminal" },
       { "<leader>d", group = "Diagnostics" },
       { "<leader>c", group = "Code/Comment" },
+      { "<leader>f", group = "Files" },
       { "<leader>?", "<Ignore>", desc = "which_key_ignore" },
 
       -- Mini Files
