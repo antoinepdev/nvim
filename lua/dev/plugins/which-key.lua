@@ -26,6 +26,7 @@ return {
       { "<leader>c", group = "Code/Comment" },
       { "<leader>f", group = "Files" },
       { "<leader>o", group = "Obsidian" },
+      { "<leader>g", group = "Git" },
       { "<leader>?", "<Ignore>", desc = "which_key_ignore" },
 
       -- Mini Files
@@ -44,6 +45,53 @@ return {
           require("mini.files").open(os.getenv("OBSIDIAN_VAULT_PATH"), true)
         end,
         desc = "Explore obsidian vault",
+      },
+
+      -- Git
+      {
+        "<leader>gd",
+        ":Gitsigns diffthis<CR>",
+        { desc = "Show diff in current file" },
+      },
+      {
+        "<leader>gt",
+        ":Gitsigns toggle_signs<CR>",
+        { desc = "Toggle signs" },
+      },
+      {
+        "<leader>gsh",
+        ":Gitsigns stage_hunk<CR>",
+        { desc = "Stage hunk" },
+      },
+      {
+        "<leader>gsH",
+        ":Gitsigns undo_stage_hunk<CR>",
+        { desc = "Unstage hunk" },
+      },
+      {
+        "<leader>gsa",
+        ":Gitsigns stage_buffer<CR>",
+        { desc = "Stage all" },
+      },
+      {
+        "<leader>gsA",
+        ":Gitsigns reset_buffer_index<CR>",
+        { desc = "Unstage all" },
+      },
+      {
+        "<leader>gj",
+        ":Gitsigns next_hunk<CR>",
+        { desc = "Go to next hunk" },
+      },
+      {
+        "<leader>gk",
+        ":Gitsigns prev_hunk<CR>",
+        { desc = "Go to prev hunk" },
+      },
+      {
+        "<leader>gp",
+        ":Gitsigns preview_hunk<CR>",
+        { desc = "Preview hunk" },
       },
     })
     wk.setup(opts)
