@@ -26,26 +26,24 @@ return {
       { "<leader>d", group = "Diagnostics" },
       { "<leader>c", group = "Code/Comment" },
       { "<leader>f", group = "Files" },
-      { "<leader>o", group = "Obsidian" },
+      { "<leader>e", group = "Explore" },
       { "<leader>g", group = "Git" },
       { "<leader>?", "<Ignore>", desc = "which_key_ignore" },
 
       -- Mini Files
       {
-        "<leader>fm",
+        "<leader>ee",
         function()
           require("mini.files").open(vim.api.nvim_buf_get_name(0), true)
         end,
-        desc = "Open mini files (directory of the current file)",
+        desc = "Explore current directory",
       },
-
-      -- Obsidian
       {
-        "<leader>oe",
+        "<leader>en",
         function()
-          require("mini.files").open(os.getenv("OBSIDIAN_VAULT_PATH"), true)
+          require("mini.files").open(os.getenv("NOTES_VAULT_PATH"), true)
         end,
-        desc = "Explore obsidian vault",
+        desc = "Explore notes vault",
       },
 
       -- Git
