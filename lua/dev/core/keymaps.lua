@@ -17,7 +17,7 @@ local function map(mode, key, cmd, opts)
 
   vim.keymap.set(mode, key, cmd, opts)
 end
-
+map("n", "gw", "<ignore>")
 -- Basic keymaps
 map("n", "<leader>ww", ":w<CR>")
 map("n", "<leader>q", ":q<CR>")
