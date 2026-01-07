@@ -21,6 +21,7 @@ return {
 
     wk.add({
       -- Basics
+      { "<leader>w", group = "Windows" },
       { "<leader>t", group = "Terminal" },
       { "<leader>d", group = "Diagnostics" },
       { "<leader>c", group = "Code/Comment" },
