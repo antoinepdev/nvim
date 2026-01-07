@@ -23,6 +23,3 @@ opt.list = true -- Show <tab> and trailing spaces
 opt.ignorecase = true -- ignore case when searching
 opt.smartcase = true -- if you include mixed case in your search, assumes you want case-sensitive (ignorecase should be true to work)
 -- opt.wrapscan = false -- when the search reaches the end of the file it will not continue at the start
-
--- Obsidian
-opt.conceallevel = 1 -- Display links like Obsidian

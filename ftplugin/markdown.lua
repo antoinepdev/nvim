@@ -2,6 +2,8 @@
 local opt = vim.opt_local
 opt.wrap = true
 opt.linebreak = true
+opt.conceallevel = 2 -- hide concealed text
+opt.concealcursor = "n" -- hide concealed text in normal mode
 
 -- keymaps
 vim.keymap.set("n", "j", "gj") -- move between wrapped text
