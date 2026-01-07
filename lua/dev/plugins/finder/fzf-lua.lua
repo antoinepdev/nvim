@@ -106,12 +106,12 @@ return {
         require("fzf-lua").files(
           vim.tbl_extend(
             "force",
-            { cwd = os.getenv("OBSIDIAN_VAULT_PATH") },
+            { cwd = os.getenv("NOTES_VAULT_PATH") },
             file_finder_opts
           )
         )
       end,
-      desc = "find notes",
+      desc = "notes",
     },
     { "<leader>ft", "<cmd>FzfLua undotree<cr>", desc = "Undotree" },
     {
