@@ -25,7 +25,7 @@ return {
       { "<leader>t", group = "Terminal" },
       { "<leader>d", group = "Diagnostics" },
       { "<leader>c", group = "Code/Comment" },
-      { "<leader>f", group = "Files" },
+      { "<leader>f", group = "Find" },
       { "<leader>e", group = "Explore" },
       { "<leader>g", group = "Git" },
       { "<leader>?", "<Ignore>", desc = "which_key_ignore" },
