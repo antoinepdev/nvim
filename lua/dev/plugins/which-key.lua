@@ -45,6 +45,11 @@ return {
         end,
         desc = "Explore notes vault",
       },
+      {
+        "<leader>ec",
+        function() require("mini.files").open(vim.fn.stdpath("config"), true) end,
+        desc = "Explore config files",
+      },
 
       -- Git
       {
