@@ -19,6 +19,7 @@ return {
       ensure_installed = {
         "typescript-language-server",
         "json-lsp",
+        "pyright",
       },
       -- auto_update = true,
     })
