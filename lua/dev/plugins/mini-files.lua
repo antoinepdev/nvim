@@ -72,4 +72,23 @@ return {
       width_preview = 25,
     },
   },
+  keys = {
+    {
+      "<leader>ee",
+      function() require("mini.files").open(vim.api.nvim_buf_get_name(0), true) end,
+      desc = "Explore current directory",
+    },
+    {
+      "<leader>en",
+      function()
+        require("mini.files").open(os.getenv("NOTES_VAULT_PATH"), true)
+      end,
+      desc = "Explore notes vault",
+    },
+    {
+      "<leader>ec",
+      function() require("mini.files").open(vim.fn.stdpath("config"), true) end,
+      desc = "Explore config files",
+    },
+  },
 }
