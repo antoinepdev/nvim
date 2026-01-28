@@ -7,6 +7,10 @@ opt.concealcursor = "n" -- hide concealed text in normal mode
 opt.number = false -- hide line number
 opt.relativenumber = false -- hide line number
 
+-- spelling
+opt.spell = true
+opt.spelllang = { "es", "en" }
+
 -- keymaps
 vim.keymap.set("n", "j", "gj") -- move between wrapped text
 vim.keymap.set("n", "k", "gk") -- move between wrapped text
