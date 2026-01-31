@@ -1,5 +1,3 @@
-require("dev.core.opts")
-require("dev.core.autocmds")
-require("dev.core.keymaps")
-require("dev.core.lsp")
-require("dev.lazy")
+require("core.opts")
+require("core.keymaps")
+require("plugin-manager")
