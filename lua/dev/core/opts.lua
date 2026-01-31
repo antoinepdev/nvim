@@ -15,12 +15,12 @@ opt.tabstop = 2 -- number of spaces for tabs
 opt.shiftwidth = 2 -- number of spaces for each step of (auto)indent
 opt.expandtab = true -- expand tab to spaces
 opt.autoindent = true -- copy indent from current line when starting new one
-opt.list = true -- Show <tab> and trailing spaces
 
 -- Search Settings
 opt.ignorecase = true -- ignore case when searching
 opt.smartcase = true -- if you include mixed case in your search, assumes you want case-sensitive (ignorecase should be true to work)
 -- opt.wrapscan = false -- when the search reaches the end of the file it will not continue at the start
 
+-- Settings
 vim.o.confirm = true -- if performing an operation that would fail due to unsaved changes in the buffer (like `:q`), instead raise a dialog asking if you wish to save the current file(s) See `:help 'confirm'`
 opt.swapfile = false -- disable Neovim swap files
