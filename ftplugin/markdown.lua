@@ -1,5 +1,6 @@
 -- opts
 local opt = vim.opt_local
+
 opt.wrap = true
 opt.linebreak = true
 opt.conceallevel = 2 -- hide concealed text
