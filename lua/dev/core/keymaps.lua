@@ -70,6 +70,3 @@ map("i", "<C-h>", "<Esc>i", { unique = false }) -- Skip next key
 map("i", "<C-l>", "<Esc>la", { unique = false }) -- Skip to previous key
 map({ "n", "v" }, "H", "0", { unique = false }) -- Go to the beginning of the line
 map({ "n", "v" }, "L", "$", { unique = false }) -- Go to the end of the line
-
--- Copy
-map("n", "ya", ":%y<CR>") -- Copy all
