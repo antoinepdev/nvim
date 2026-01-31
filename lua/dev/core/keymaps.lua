@@ -1,5 +1,5 @@
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+vim.g.mapleader = " " -- set leader key
+vim.g.maplocalleader = " " -- set local leader key
 
 local function map(mode, key, cmd, opts)
   local default_opts = {
@@ -17,11 +17,10 @@ local function map(mode, key, cmd, opts)
 
   vim.keymap.set(mode, key, cmd, opts)
 end
-map("n", "gw", "<ignore>")
--- Basic keymaps
-map("n", "<leader>ww", ":w<CR>")
-map("n", "<leader>q", ":q<CR>")
-map("n", "<leader>Q", ":q!<CR>")
+
+map("n", "<leader>ww", ":w<CR>") -- Write file
+map("n", "<leader>q", ":q<CR>") -- Quit
+map("n", "<leader>Q", ":q!<CR>") -- Quit anyway
 map("i", "jk", "<ESC>") -- Exit insert mode with jk
 map("n", "<ESC>", ":nohl<CR>") -- Disable highlight with ESC
 
