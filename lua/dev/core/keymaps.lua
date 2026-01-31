@@ -25,11 +25,21 @@ map("n", "<leader>Q", ":q!<CR>")
 map("i", "jk", "<ESC>") -- Exit insert mode with jk
 map("n", "<ESC>", ":nohl<CR>") -- Disable highlight with ESC
 
--- Window movement
+-- Window management
 map("n", "<leader>wh", "<C-w>h", { desc = "Move to left window" })
-map("n", "<leader>wl", "<C-w>l", { desc = "Move to left window" })
+map("n", "<leader>wl", "<C-w>l", { desc = "Move to right window" })
 map("n", "<leader>wj", "<C-w>j", { desc = "Move to bottom window" })
 map("n", "<leader>wk", "<C-w>k", { desc = "Move to top window" })
+map("n", "<leader>wf", function()
+  local opt = vim.opt
+  if opt.number:get() == true or opt.relativenumber:get() == true then
+    opt.number = false
+    opt.relativenumber = false
+  else
+    opt.number = true
+    opt.relativenumber = true
+  end
+end, { desc = "Toggle fullscreen" })
 
 -- Terminal
 map(
